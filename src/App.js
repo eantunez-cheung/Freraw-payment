@@ -38,19 +38,21 @@ function App() {
 
   const onError = (data, actions) => {
     console.log(data)
-    setErrorMessage("Une erreur s'est produite lors de votre paiement")
+    setErrorMessage("Une erreur c'est produite lors de votre paiement")
   }
 
   useEffect(() => {
     if (success) {
-      alert("Payement successful !!")
+      alert("Payement réussi avec succès !!")
+    } else {
+      alert(ErrorMessage)
     }
   }, [success])
 
-  console.log(1, orderID)
-  console.log(2, success)
-  console.log(3, ErrorMessage)
-  console.log(4, amount)
+  // console.log(1, orderID)
+  // console.log(2, success)
+  // console.log(3, ErrorMessage)
+  // console.log(4, amount)
 
   return (
     <div className='App'>
